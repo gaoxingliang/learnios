@@ -2,10 +2,10 @@
 learn iOS by guide - http://xiaoboswift.com/course/explore/iosbeginner
 
 #projects
-##helloworldapp
+#helloworldapp
 helloworld to swift
-##autolatoutTest
+#autolatoutTest
 a demo about how to use auto layout
-##UIStackViewTest
+#UIStackViewTest
 a demo how to use UIStackView
 
