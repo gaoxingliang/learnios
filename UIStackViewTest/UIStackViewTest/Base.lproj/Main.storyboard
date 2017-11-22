@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina5_5" orientation="portrait">
+    <device id="retina4_7" orientation="landscape">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -19,45 +19,62 @@
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="E4C-IG-Cas">
-                                <rect key="frame" x="131.66666666666669" y="39.999999999999993" width="150.66666666666669" height="80.333333333333314"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="E4C-IG-Cas" userLabel="文字StackView">
+                                <rect key="frame" x="216.5" y="40" width="234" height="60"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="优衣库" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="G0Y-mr-fzB">
-                                        <rect key="frame" x="0.0" y="0.0" width="150.66666666666666" height="60"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="151" height="60"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="50"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="全国500强" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gAV-LN-ugW">
-                                        <rect key="frame" x="34" y="59.999999999999993" width="83" height="20.333333333333321"/>
+                                        <rect key="frame" x="151" y="20" width="83" height="20.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
+                                <variation key="heightClass=compact-widthClass=compact" axis="horizontal"/>
+                                <variation key="heightClass=compact-widthClass=regular" axis="horizontal"/>
                             </stackView>
-                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="7nW-FV-axj">
-                                <rect key="frame" x="0.0" y="181.66666666666663" width="414" height="372.66666666666674"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="7nW-FV-axj" userLabel="图片StackView">
+                                <rect key="frame" x="0.0" y="21" width="667" height="333.5"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="t-shirt-1" translatesAutoresizingMaskIntoConstraints="NO" id="ZyF-VF-cmh">
-                                        <rect key="frame" x="0.0" y="0.0" width="138" height="372.66666666666674"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="222.5" height="333.5"/>
                                     </imageView>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="t-shirt-2" translatesAutoresizingMaskIntoConstraints="NO" id="q5p-Yt-b2C">
-                                        <rect key="frame" x="138" y="0.0" width="138" height="372.66666666666674"/>
+                                        <rect key="frame" x="222.5" y="0.0" width="222" height="333.5"/>
                                     </imageView>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="t-shirt-3" translatesAutoresizingMaskIntoConstraints="NO" id="o1O-xU-2mI">
-                                        <rect key="frame" x="276" y="0.0" width="138" height="372.66666666666674"/>
+                                        <rect key="frame" x="444.5" y="0.0" width="222.5" height="333.5"/>
                                     </imageView>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstAttribute="width" secondItem="7nW-FV-axj" secondAttribute="height" multiplier="375:338" id="JnV-Sp-2Ws"/>
+                                    <constraint firstAttribute="width" secondItem="7nW-FV-axj" secondAttribute="height" multiplier="2" id="JnV-Sp-2Ws"/>
                                 </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="JnV-Sp-2Ws"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=compact-widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="JnV-Sp-2Ws"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=compact-widthClass=regular">
+                                    <mask key="constraints">
+                                        <include reference="JnV-Sp-2Ws"/>
+                                    </mask>
+                                </variation>
                             </stackView>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Kzs-TG-rc0">
-                                <rect key="frame" x="168.66666666666666" y="646" width="77" height="60"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Kzs-TG-rc0" userLabel="登录StackView">
+                                <rect key="frame" x="295" y="285" width="77" height="60"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jhr-Oj-75b">
                                         <rect key="frame" x="23" y="0.0" width="31" height="30"/>
