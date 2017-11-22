@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "1D0E81AD1FC52ED30082A6BF"
+               BlueprintIdentifier = "1D0E81CB1FC530090082A6BF"
                BuildableName = "UITableViewTest.app"
                BlueprintName = "UITableViewTest"
                ReferencedContainer = "container:UITableViewTest.xcodeproj">
@@ -32,7 +32,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "1D0E81AD1FC52ED30082A6BF"
+            BlueprintIdentifier = "1D0E81CB1FC530090082A6BF"
             BuildableName = "UITableViewTest.app"
             BlueprintName = "UITableViewTest"
             ReferencedContainer = "container:UITableViewTest.xcodeproj">
@@ -55,7 +55,7 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "1D0E81AD1FC52ED30082A6BF"
+            BlueprintIdentifier = "1D0E81CB1FC530090082A6BF"
             BuildableName = "UITableViewTest.app"
             BlueprintName = "UITableViewTest"
             ReferencedContainer = "container:UITableViewTest.xcodeproj">
@@ -74,7 +74,7 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "1D0E81AD1FC52ED30082A6BF"
+            BlueprintIdentifier = "1D0E81CB1FC530090082A6BF"
             BuildableName = "UITableViewTest.app"
             BlueprintName = "UITableViewTest"
             ReferencedContainer = "container:UITableViewTest.xcodeproj">
