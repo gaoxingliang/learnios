@@ -10,12 +10,12 @@ import UIKit
 
 class AreaTableViewController: UITableViewController {
 
-    
-    var areas = ["成都", "洪湖市", "仙桃市北区", "云阳县凤鸣镇", "云阳县盘石镇", "洪湖市沙口镇", "贺龙中学", "SanatabAraba", "成都武侯区", "A3", "A4", "B3", "b4", "6666", "777", "10001", "10086", "1008611"];
+    // use static 来保证已经被初始化了
+    static var areas = ["成都", "洪湖市", "仙桃市北区", "云阳县凤鸣镇", "云阳县盘石镇", "洪湖市沙口镇", "贺龙中学", "SanatabAraba", "成都武侯区", "A3", "A4", "B3", "b4", "6666", "777", "10001", "10086", "1008611"];
     var pics = ["baiyun", "chengxi", "furong", "jinping", "nangang", "qilihe", "shangjie", "wuhou", "xining", "xinzhuang", "yaodu", "youxi"]
     var provinces = ["四川", "湖北", "湖北", "重庆", "重庆", "重庆", "湖北", "海南"]
     
-    
+    var visited = [Bool](repeatElement(false, count: areas.count))
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -32,6 +32,42 @@ class AreaTableViewController: UITableViewController {
         // Dispose of any resources that can be recreated.
     }
 
+    // MARK: - Table view delegate
+    // 当行被选中的时候调用的
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        print("you clicked section:", indexPath.section, " row:" , indexPath.row )
+        
+        // .alert 从中间弹出 适合于只有1-2个选项的时候
+        // .actionsheet 从底部弹出 适合有多个选项(>=3)
+//        let menu = UIAlertController(title: "交互菜单",
+//                                     message: "你点击了\(indexPath.row)行", preferredStyle: .alert)
+//        let option1 = UIAlertAction(title :"OK", style: .default, handler: nil)
+//        menu.addAction(option1)
+        // 不同的按钮style 呈现了不同的效果
+        //let option2 = UIAlertAction(title :"CaNCel", style: .cancel, handler: nil)
+        //let option3 = UIAlertAction(title :"delete", style: .destructive, handler: nil)
+        //menu.addAction(option2)
+        //menu.addAction(option3)
+        
+        
+        // .actionSheet
+        let menu = UIAlertController(title: "同学你好", message: "你点击了\(indexPath.row) 行", preferredStyle: .actionSheet)
+        let option1 = UIAlertAction(title: "ok", style: .default, handler:nil);
+
+        let option2 = UIAlertAction(title: "我去过了", style: .destructive) { (UIAlertAction) in
+            let cell = tableView.cellForRow(at: indexPath)
+            cell?.accessoryType = .checkmark
+            self.visited[indexPath.row] = true;
+            //cell?.accessoryType = .detailButton
+        }
+        menu.addAction(option1)
+        menu.addAction(option2);
+        
+        self.present(menu, animated: true, completion: nil)
+        // 清除对应行的选中状态
+        tableView.deselectRow(at: indexPath, animated: true)
+    }
+    
     // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {
@@ -41,7 +77,7 @@ class AreaTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return areas.count;
+        return AreaTableViewController.areas.count;
     }
 
     
@@ -51,7 +87,7 @@ class AreaTableViewController: UITableViewController {
         // as? -> 非强制转换, 失败不崩溃
         let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdCell", for: indexPath) as! TableViewCell
         cell.thumbnail.image = UIImage(named: pics[indexPath.row%pics.count])
-        cell.nameLabel.text = areas[indexPath.row]
+        cell.nameLabel.text = AreaTableViewController.areas[indexPath.row]
         cell.partLabel.text = pics[indexPath.row%pics.count]
         cell.provinceLable.text = provinces[indexPath.row%provinces.count]
         
@@ -60,6 +96,15 @@ class AreaTableViewController: UITableViewController {
         // 使裁剪生效
         cell.thumbnail.clipsToBounds = true
 
+        // 重新根据是否被选中了来设置cell的选中状态
+//        if visited[indexPath.row] {
+//            cell.accessoryType = .checkmark
+//        }
+//        else {
+//            cell.accessoryType = .none
+//        }
+        cell.accessoryType = visited[indexPath.row] ? .checkmark : .none
+        
         // Configure the cell...
         //cell.textLabel?.text = areas[indexPath.row]
         //cell.imageView?.image = UIImage(named: pics[indexPath.row%pics.count])
