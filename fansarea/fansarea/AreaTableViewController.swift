@@ -147,17 +147,72 @@ class AreaTableViewController: UITableViewController {
     }
     */
 
-    /*
+    // 自定义的右滑菜单
+    // 一旦覆盖该方法,系统自带的delete就没有了
+    override func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath) -> [UITableViewRowAction]? {
+        let actionShare = UITableViewRowAction(style: .normal, title: "分享") { (rowAction, indexPath) in
+            let actionSheet = UIAlertController(title: "分享到", message: nil, preferredStyle: .actionSheet)
+            let qq = UIAlertAction(title: "qq", style: .default, handler: nil)
+            let wechat = UIAlertAction(title: "wechat", style: .default, handler: nil)
+            let cancel = UIAlertAction(title: "cancel", style: .cancel, handler: nil)
+            actionSheet.addAction(qq)
+            actionSheet.addAction(wechat)
+            actionSheet.addAction(cancel)
+            
+            self.present(actionSheet, animated: true, completion: nil)
+        }
+        // 设置按钮颜色
+        //actionShare.backgroundColor = UIColor.orange
+        actionShare.backgroundColor = UIColor(red: 9/255, green: 113/255, blue: 178/255, alpha: 0.8)
+        let actionDel = UITableViewRowAction(style: .destructive, title: "删除") { (rowAction, indexP) in
+            // 删除对应行的数据
+            // 先删除数据 再删除视图
+            AreaTableViewController.areas.remove(at: indexP.row)
+            self.visited.remove(at: indexP.row)
+            //其他数组是随便写的 就先不管了
+            
+            // debug日志
+            print(String(format: "删除一行后还剩多少个区域-%d", AreaTableViewController.areas.count))
+            for area in AreaTableViewController.areas {
+                // 字符串的格式化是这样的 不是 %s
+                print(String(format: "area=%@", area))
+            }
+            
+            
+            // Delete the row from the data source
+            tableView.deleteRows(at: [indexP], with: .fade)
+        }
+        
+        return [actionShare, actionDel]
+    }
+    
+    // 右滑菜单
+    // 这个是默认的
     // Override to support editing the table view.
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
+            // 删除对应行的数据
+            // 先删除数据 再删除视图
+            AreaTableViewController.areas.remove(at: indexPath.row)
+            self.visited.remove(at: indexPath.row)
+            //其他数组是随便写的 就先不管了
+            
+            // debug日志
+            print(String(format: "删除一行后还剩多少个区域-%d", AreaTableViewController.areas.count))
+            for area in AreaTableViewController.areas {
+                // 字符串的格式化是这样的 不是 %s
+                print(String(format: "area=%@", area))
+            }
+            
+            
             // Delete the row from the data source
             tableView.deleteRows(at: [indexPath], with: .fade)
+            
         } else if editingStyle == .insert {
             // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
         }    
     }
-    */
+    
 
     /*
     // Override to support rearranging the table view.
