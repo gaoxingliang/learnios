@@ -13,6 +13,7 @@
 		1D447D0E1FCC2FFD0022C154 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1D447D0C1FCC2FFD0022C154 /* LaunchScreen.storyboard */; };
 		1D447D161FCC30F80022C154 /* AreaTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D447D151FCC30F80022C154 /* AreaTableViewController.swift */; };
 		1D447D181FCC48AE0022C154 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D447D171FCC48AE0022C154 /* TableViewCell.swift */; };
+		1D7481461FCEDCEE00861690 /* AreaDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D7481451FCEDCEE00861690 /* AreaDetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		1D447D0F1FCC2FFD0022C154 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1D447D151FCC30F80022C154 /* AreaTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AreaTableViewController.swift; sourceTree = "<group>"; };
 		1D447D171FCC48AE0022C154 /* TableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
+		1D7481451FCEDCEE00861690 /* AreaDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AreaDetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +60,7 @@
 			children = (
 				1D447D031FCC2FFD0022C154 /* AppDelegate.swift */,
 				1D447D071FCC2FFD0022C154 /* Main.storyboard */,
+				1D7481451FCEDCEE00861690 /* AreaDetailViewController.swift */,
 				1D447D171FCC48AE0022C154 /* TableViewCell.swift */,
 				1D447D151FCC30F80022C154 /* AreaTableViewController.swift */,
 				1D447D0A1FCC2FFD0022C154 /* Assets.xcassets */,
@@ -140,6 +143,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1D7481461FCEDCEE00861690 /* AreaDetailViewController.swift in Sources */,
 				1D447D181FCC48AE0022C154 /* TableViewCell.swift in Sources */,
 				1D447D161FCC30F80022C154 /* AreaTableViewController.swift in Sources */,
 				1D447D041FCC2FFD0022C154 /* AppDelegate.swift in Sources */,

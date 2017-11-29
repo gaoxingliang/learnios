@@ -2,6 +2,14 @@
 //  AreaTableViewController.swift
 //  fansarea
 //
+/**
+ 转场类型: show 最常见的, 提供顶部有一个返回到上一级的按钮
+ show detail: 与show类似 替换原视图 而且没有返回按钮了
+ present modally: 从底部往上弹出, 用于连贯性不强的视图
+ present as poper: 弹出菜单的效果
+ */
+
+
 //  Created by edward.gao on 27/11/2017.
 //  Copyright © 2017 edward.gao. All rights reserved.
 //
@@ -10,6 +18,8 @@ import UIKit
 
 class AreaTableViewController: UITableViewController {
 
+
+    
     // use static 来保证已经被初始化了
     static var areas = ["成都", "洪湖市", "仙桃市北区", "云阳县凤鸣镇", "云阳县盘石镇", "洪湖市沙口镇", "贺龙中学", "SanatabAraba", "成都武侯区", "A3", "A4", "B3", "b4", "6666", "777", "10001", "10086", "1008611"];
     var pics = ["baiyun", "chengxi", "furong", "jinping", "nangang", "qilihe", "shangjie", "wuhou", "xining", "xinzhuang", "yaodu", "youxi"]
@@ -33,41 +43,42 @@ class AreaTableViewController: UITableViewController {
     }
 
     // MARK: - Table view delegate
-    // 当行被选中的时候调用的
-    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        print("you clicked section:", indexPath.section, " row:" , indexPath.row )
-        
-        // .alert 从中间弹出 适合于只有1-2个选项的时候
-        // .actionsheet 从底部弹出 适合有多个选项(>=3)
-//        let menu = UIAlertController(title: "交互菜单",
-//                                     message: "你点击了\(indexPath.row)行", preferredStyle: .alert)
-//        let option1 = UIAlertAction(title :"OK", style: .default, handler: nil)
+    // 当有了场景后, 注释掉这里来避免在子场景中弹出 Presenting view controllers on detached view controllers is discouraged
+//    // 当行被选中的时候调用的
+//    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+//        print("you clicked section:", indexPath.section, " row:" , indexPath.row )
+//
+//        // .alert 从中间弹出 适合于只有1-2个选项的时候
+//        // .actionsheet 从底部弹出 适合有多个选项(>=3)
+////        let menu = UIAlertController(title: "交互菜单",
+////                                     message: "你点击了\(indexPath.row)行", preferredStyle: .alert)
+////        let option1 = UIAlertAction(title :"OK", style: .default, handler: nil)
+////        menu.addAction(option1)
+//        // 不同的按钮style 呈现了不同的效果
+//        //let option2 = UIAlertAction(title :"CaNCel", style: .cancel, handler: nil)
+//        //let option3 = UIAlertAction(title :"delete", style: .destructive, handler: nil)
+//        //menu.addAction(option2)
+//        //menu.addAction(option3)
+//
+//
+//        // .actionSheet
+//        let menu = UIAlertController(title: "同学你好", message: "你点击了\(indexPath.row) 行", preferredStyle: .actionSheet)
+//        let option1 = UIAlertAction(title: "ok", style: .default, handler:nil);
+//
+//        let option2 = UIAlertAction(title: "我去过了", style: .destructive) { (UIAlertAction) in
+//            let cell = tableView.cellForRow(at: indexPath) as! TableViewCell
+//            //cell?.accessoryType = .checkmark
+//            cell.favImg.isHidden = false
+//            self.visited[indexPath.row] = true;
+//            //cell?.accessoryType = .detailButton
+//        }
 //        menu.addAction(option1)
-        // 不同的按钮style 呈现了不同的效果
-        //let option2 = UIAlertAction(title :"CaNCel", style: .cancel, handler: nil)
-        //let option3 = UIAlertAction(title :"delete", style: .destructive, handler: nil)
-        //menu.addAction(option2)
-        //menu.addAction(option3)
-        
-        
-        // .actionSheet
-        let menu = UIAlertController(title: "同学你好", message: "你点击了\(indexPath.row) 行", preferredStyle: .actionSheet)
-        let option1 = UIAlertAction(title: "ok", style: .default, handler:nil);
-        
-        let option2 = UIAlertAction(title: "我去过了", style: .destructive) { (UIAlertAction) in
-            let cell = tableView.cellForRow(at: indexPath) as! TableViewCell
-            //cell?.accessoryType = .checkmark
-            cell.favImg.isHidden = false
-            self.visited[indexPath.row] = true;
-            //cell?.accessoryType = .detailButton
-        }
-        menu.addAction(option1)
-        menu.addAction(option2);
-        
-        self.present(menu, animated: true, completion: nil)
-        // 清除对应行的选中状态
-        tableView.deselectRow(at: indexPath, animated: true)
-    }
+//        menu.addAction(option2);
+//
+//        self.present(menu, animated: true, completion: nil)
+//        // 清除对应行的选中状态
+//        tableView.deselectRow(at: indexPath, animated: true)
+//    }
     
     // MARK: - Table view data source
 
@@ -229,14 +240,15 @@ class AreaTableViewController: UITableViewController {
     }
     */
 
-    /*
-    // MARK: - Navigation
-
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
+        // 判断转场ID
+        if segue.identifier == "showAreaDetailSegue" {
+            let dest = segue.destination as! AreaDetailViewController
+            dest.currentAreaImageName = pics[tableView.indexPathForSelectedRow!.row]
+        }
     }
-    */
 
 }

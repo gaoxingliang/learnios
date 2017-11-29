@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="gSm-Oc-G4q">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="euQ-3k-gDD">
     <device id="retina4_0" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
@@ -14,7 +15,7 @@
         </array>
     </customFonts>
     <scenes>
-        <!--Area Table View Controller-->
+        <!--粉丝区域-->
         <scene sceneID="7Uj-aj-WkR">
             <objects>
                 <tableViewController id="gSm-Oc-G4q" customClass="AreaTableViewController" customModule="fansarea" customModuleProvider="target" sceneMemberID="viewController">
@@ -67,6 +68,7 @@
                                     <outlet property="partLabel" destination="AAi-un-veT" id="NmS-vf-AJd"/>
                                     <outlet property="provinceLable" destination="7uc-VH-7bj" id="SpB-tq-BhC"/>
                                     <outlet property="thumbnail" destination="PeJ-2I-TiY" id="evf-6v-1jF"/>
+                                    <segue destination="PYF-R2-l87" kind="show" identifier="showAreaDetailSegue" id="MOY-FF-Js0"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -75,10 +77,61 @@
                             <outlet property="delegate" destination="gSm-Oc-G4q" id="LoQ-MS-8OS"/>
                         </connections>
                     </tableView>
+                    <navigationItem key="navigationItem" title="粉丝区域" id="4fi-Da-jHt"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PpK-ts-ABl" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="133" y="60"/>
+            <point key="canvasLocation" x="528.75" y="59.154929577464792"/>
+        </scene>
+        <!--Area Detail View Controller-->
+        <scene sceneID="1eU-mL-cru">
+            <objects>
+                <viewController id="PYF-R2-l87" customClass="AreaDetailViewController" customModule="fansarea" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="6Qw-pX-uo3"/>
+                        <viewControllerLayoutGuide type="bottom" id="x0s-ih-cD1"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="WqB-N0-gLS">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="9ze-qo-eLh">
+                                <rect key="frame" x="16" y="64" width="288" height="504"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="x0s-ih-cD1" firstAttribute="top" secondItem="9ze-qo-eLh" secondAttribute="bottom" id="3Ct-4b-qYk"/>
+                            <constraint firstItem="9ze-qo-eLh" firstAttribute="leading" secondItem="WqB-N0-gLS" secondAttribute="leadingMargin" id="H0J-ZD-SSs"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="9ze-qo-eLh" secondAttribute="trailing" id="Zzz-df-faz"/>
+                            <constraint firstItem="9ze-qo-eLh" firstAttribute="top" secondItem="6Qw-pX-uo3" secondAttribute="bottom" id="aqE-DK-N4S"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="detailImgView" destination="9ze-qo-eLh" id="MQV-vx-Oyc"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5gf-UR-Aa8" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1556" y="59"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="9hb-gf-ub0">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="euQ-3k-gDD" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="bnt-sX-tkh">
+                        <rect key="frame" x="0.0" y="20" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="gSm-Oc-G4q" kind="relationship" relationship="rootViewController" id="hNq-Tm-I6N"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qYW-FM-iUp" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-339" y="59"/>
         </scene>
     </scenes>
     <resources>
