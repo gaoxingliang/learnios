@@ -53,10 +53,11 @@ class AreaTableViewController: UITableViewController {
         // .actionSheet
         let menu = UIAlertController(title: "同学你好", message: "你点击了\(indexPath.row) 行", preferredStyle: .actionSheet)
         let option1 = UIAlertAction(title: "ok", style: .default, handler:nil);
-
+        
         let option2 = UIAlertAction(title: "我去过了", style: .destructive) { (UIAlertAction) in
-            let cell = tableView.cellForRow(at: indexPath)
-            cell?.accessoryType = .checkmark
+            let cell = tableView.cellForRow(at: indexPath) as! TableViewCell
+            //cell?.accessoryType = .checkmark
+            cell.favImg.isHidden = false
             self.visited[indexPath.row] = true;
             //cell?.accessoryType = .detailButton
         }
@@ -70,6 +71,8 @@ class AreaTableViewController: UITableViewController {
     
     // MARK: - Table view data source
 
+    
+    
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
         return 1;
@@ -103,12 +106,36 @@ class AreaTableViewController: UITableViewController {
 //        else {
 //            cell.accessoryType = .none
 //        }
-        cell.accessoryType = visited[indexPath.row] ? .checkmark : .none
+        
+        
+        //cell.accessoryType = visited[indexPath.row] ? .checkmark : .none
+        if visited[indexPath.row] {
+            cell.favImg.isHidden = false;
+        }
+        else {
+            cell.favImg.isHidden = true;
+        }
+        
+        // 注册对应的点击事件
+        cell.favImg.isUserInteractionEnabled = true
+        cell.favImg.tag = indexPath.row
+        let tapped:UITapGestureRecognizer = UITapGestureRecognizer(target: self, action:  #selector(AreaTableViewController.TappedOnImage(sender:)))
+        tapped.numberOfTapsRequired = 1
+        cell.favImg.addGestureRecognizer(tapped)
+    
         
         // Configure the cell...
         //cell.textLabel?.text = areas[indexPath.row]
         //cell.imageView?.image = UIImage(named: pics[indexPath.row%pics.count])
         return cell
+    }
+
+    // 当fav 图片被点击后调用
+    @objc func TappedOnImage(sender:UITapGestureRecognizer){
+        let index = sender.view?.tag as! Int
+        visited[index] = false
+        let image = sender.view as! UIImageView
+        image.isHidden = true
     }
     
 

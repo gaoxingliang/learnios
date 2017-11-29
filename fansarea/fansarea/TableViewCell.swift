@@ -10,6 +10,7 @@ import UIKit
 
 class TableViewCell: UITableViewCell {
 
+    @IBOutlet weak var favImg: UIImageView!
     
     // IBOutlet is a ref for a UI component
     // IBAction is a ref for UI component which you can touch it and do more operations
@@ -20,8 +21,7 @@ class TableViewCell: UITableViewCell {
     @IBOutlet weak var provinceLable: UILabel!
     @IBOutlet weak var partLabel: UILabel!
 
-    
-    
+ 
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -32,5 +32,16 @@ class TableViewCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
-
+    
+//    override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
+//        let touch:UITouch? = touches.first
+//        if touch?.view == favImg {
+//            print("touch id...")
+//        } else {
+//            super.touchesEnded(touches, with: event)
+//        }
+//
+//
+//    }
+    
 }
