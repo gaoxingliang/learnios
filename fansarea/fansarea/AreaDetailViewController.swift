@@ -12,7 +12,9 @@ import UIKit
 class AreaDetailViewController: UIViewController {
 
     // 当前详情页所展示的地区图片的名称
-    var currentAreaImageName = ""
+    var area : Area!
+    
+    
     
     // image view 的 几种常见的显示方式:
     // 在storyboard中设置: Scale to Fill 拉伸; Aspect to fit: 居中; Aspect Fill 平铺
@@ -24,7 +26,7 @@ class AreaDetailViewController: UIViewController {
 
         // Do any additional setup after loading the view.
         // 详情页面载入完毕 设置对应的图片路径
-        detailImgView.image = UIImage(named: currentAreaImageName)
+        detailImgView.image = UIImage(named: area.image)
         
     }
 
