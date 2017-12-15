@@ -6,7 +6,6 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
@@ -68,7 +67,7 @@
                                     <outlet property="partLabel" destination="AAi-un-veT" id="NmS-vf-AJd"/>
                                     <outlet property="provinceLable" destination="7uc-VH-7bj" id="SpB-tq-BhC"/>
                                     <outlet property="thumbnail" destination="PeJ-2I-TiY" id="evf-6v-1jF"/>
-                                    <segue destination="PYF-R2-l87" kind="show" identifier="showAreaDetailSegue" id="MOY-FF-Js0"/>
+                                    <segue destination="k1o-vx-8tQ" kind="show" identifier="showAreaDetailSegue" id="CQP-PH-pZh"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -83,37 +82,40 @@
             </objects>
             <point key="canvasLocation" x="528.75" y="59.154929577464792"/>
         </scene>
-        <!--Area Detail View Controller-->
-        <scene sceneID="1eU-mL-cru">
+        <!--Detail Table View Controller-->
+        <scene sceneID="czE-T5-Q2o">
             <objects>
-                <viewController id="PYF-R2-l87" customClass="AreaDetailViewController" customModule="fansarea" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="6Qw-pX-uo3"/>
-                        <viewControllerLayoutGuide type="bottom" id="x0s-ih-cD1"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="WqB-N0-gLS">
+                <tableViewController id="k1o-vx-8tQ" customClass="DetailTableViewController" customModule="fansarea" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="Z4o-5Y-mN8">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="9ze-qo-eLh">
-                                <rect key="frame" x="16" y="64" width="288" height="504"/>
-                            </imageView>
-                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="x0s-ih-cD1" firstAttribute="top" secondItem="9ze-qo-eLh" secondAttribute="bottom" id="3Ct-4b-qYk"/>
-                            <constraint firstItem="9ze-qo-eLh" firstAttribute="leading" secondItem="WqB-N0-gLS" secondAttribute="leadingMargin" id="H0J-ZD-SSs"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="9ze-qo-eLh" secondAttribute="trailing" id="Zzz-df-faz"/>
-                            <constraint firstItem="9ze-qo-eLh" firstAttribute="top" secondItem="6Qw-pX-uo3" secondAttribute="bottom" id="aqE-DK-N4S"/>
-                        </constraints>
-                    </view>
+                        <imageView key="tableHeaderView" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="y9J-IB-MOl">
+                            <rect key="frame" x="0.0" y="0.0" width="320" height="300"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        </imageView>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="36" id="Kb9-0Z-XgL">
+                                <rect key="frame" x="0.0" y="328" width="320" height="36"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Kb9-0Z-XgL" id="ubd-BK-2y9">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="35.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="k1o-vx-8tQ" id="Bz1-Dp-SGM"/>
+                            <outlet property="delegate" destination="k1o-vx-8tQ" id="zYz-wa-lzx"/>
+                        </connections>
+                    </tableView>
                     <connections>
-                        <outlet property="detailImgView" destination="9ze-qo-eLh" id="MQV-vx-Oyc"/>
+                        <outlet property="detailImg" destination="y9J-IB-MOl" id="Ama-yW-5MU"/>
                     </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="5gf-UR-Aa8" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Iju-W9-1jF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1556" y="59"/>
+            <point key="canvasLocation" x="1522" y="749"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="9hb-gf-ub0">

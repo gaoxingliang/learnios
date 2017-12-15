@@ -15,6 +15,7 @@
 		1D447D181FCC48AE0022C154 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D447D171FCC48AE0022C154 /* TableViewCell.swift */; };
 		1D7481461FCEDCEE00861690 /* AreaDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D7481451FCEDCEE00861690 /* AreaDetailViewController.swift */; };
 		1D7481481FD3F48200861690 /* Area.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D7481471FD3F48200861690 /* Area.swift */; };
+		1D74814A1FD3FE5C00861690 /* DetailTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D7481491FD3FE5C00861690 /* DetailTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		1D447D171FCC48AE0022C154 /* TableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
 		1D7481451FCEDCEE00861690 /* AreaDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AreaDetailViewController.swift; sourceTree = "<group>"; };
 		1D7481471FD3F48200861690 /* Area.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Area.swift; sourceTree = "<group>"; };
+		1D7481491FD3FE5C00861690 /* DetailTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,6 +71,7 @@
 				1D447D0C1FCC2FFD0022C154 /* LaunchScreen.storyboard */,
 				1D447D0F1FCC2FFD0022C154 /* Info.plist */,
 				1D7481471FD3F48200861690 /* Area.swift */,
+				1D7481491FD3FE5C00861690 /* DetailTableViewController.swift */,
 			);
 			path = fansarea;
 			sourceTree = "<group>";
@@ -146,6 +149,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1D74814A1FD3FE5C00861690 /* DetailTableViewController.swift in Sources */,
 				1D7481481FD3F48200861690 /* Area.swift in Sources */,
 				1D7481461FCEDCEE00861690 /* AreaDetailViewController.swift in Sources */,
 				1D447D181FCC48AE0022C154 /* TableViewCell.swift in Sources */,
