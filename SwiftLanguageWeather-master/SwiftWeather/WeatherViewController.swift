@@ -24,6 +24,12 @@ class WeatherViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         viewModel = WeatherViewModel()
+        
+        // let's make it accessable
+//        locationLabel.text = ""
+//        iconLabel.text = ""
+//        temperatureLabel.text = ""
+        
         viewModel?.startLocationService()
         setA11yIdentifiers()
         
@@ -105,6 +111,7 @@ class WeatherViewController: UIViewController {
             viewModel?.iconText.observe {
                 [unowned self] in
                 self.iconLabel.text = $0
+                
             }
             
             viewModel?.temperature.observe {

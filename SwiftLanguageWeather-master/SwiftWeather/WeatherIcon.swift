@@ -16,6 +16,7 @@ import Foundation
       var caseName = element.selectorText.substring(8,
         element.selectorText.indexOf('::before')).replace('-', '')
       caseString += 'case ' + caseName + ' = "' + caseName + '"\n';
+      console.lg("content is  " + content)
       caseAndReturnString += 'case .' + caseName + ': return "\\u{'
         + element.style['content'].charCodeAt(1).toString(16) + '}"\n'
     }

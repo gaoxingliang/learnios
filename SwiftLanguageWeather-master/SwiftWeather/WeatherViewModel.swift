@@ -87,6 +87,9 @@ extension WeatherViewModel: LocationServiceDelegate {
   func locationDidUpdate(_ service: LocationService, location: CLLocation) {
     weatherService.retrieveWeatherInfo(location) { (weather, error) -> Void in
       DispatchQueue.main.async(execute: {
+        
+        print("Receive a finish handler....")
+        
         if let unwrappedError = error {
           print(unwrappedError)
           self.update(unwrappedError)
