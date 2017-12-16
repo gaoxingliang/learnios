@@ -35,6 +35,10 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="boy" translatesAutoresizingMaskIntoConstraints="NO" id="o7f-el-hoO">
                                 <rect key="frame" x="20" y="20" width="374" height="716"/>
                             </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="music-player" translatesAutoresizingMaskIntoConstraints="NO" id="GdQ-Aa-S9p">
+                                <rect key="frame" x="188" y="77" width="80" height="80"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -45,13 +49,80 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="musicPlayerImgView" destination="GdQ-Aa-S9p" id="bZL-9W-Kob"/>
                         <outlet property="weatherImgView" destination="ZNw-Pp-SKz" id="npr-yw-AUM"/>
                         <segue destination="BYZ-38-t0r" kind="showDetail" identifier="main2Weather" id="YGK-YZ-ueX"/>
+                        <segue destination="NMA-Jh-QYK" kind="showDetail" identifier="main2Music" id="pBw-J1-UwS"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dOM-qP-2dA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-614" y="113"/>
+            <point key="canvasLocation" x="-1422" y="-108"/>
+        </scene>
+        <!--Music View Controller-->
+        <scene sceneID="KWT-SM-Bnv">
+            <objects>
+                <viewController id="NMA-Jh-QYK" customClass="MusicViewController" customModule="SwiftWeather" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="w0V-Et-p30"/>
+                        <viewControllerLayoutGuide type="bottom" id="74e-aJ-XdT"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="zOs-o5-Q8M">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8uq-rE-228">
+                                <rect key="frame" x="20" y="109" width="374" height="374"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tE6-Ge-5go">
+                                <rect key="frame" x="20" y="529" width="70" height="70"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="prev" image="previous"/>
+                                <connections>
+                                    <action selector="prevSong:" destination="NMA-Jh-QYK" eventType="touchUpInside" id="Rhf-Y4-foD"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cnh-xn-Jw0">
+                                <rect key="frame" x="324" y="528" width="70" height="70"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="next" image="next"/>
+                                <connections>
+                                    <action selector="nextSong:" destination="NMA-Jh-QYK" eventType="touchUpInside" id="WcV-TA-H2q"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HmD-TO-sPK">
+                                <rect key="frame" x="172" y="529" width="70" height="70"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="start" image="play"/>
+                                <connections>
+                                    <action selector="clickedStartOrStop:" destination="NMA-Jh-QYK" eventType="touchUpInside" id="I3v-g0-Mi0"/>
+                                </connections>
+                            </button>
+                            <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="R9k-78-fVZ">
+                                <rect key="frame" x="18" y="636" width="378" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </slider>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="song" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qmw-r0-YBl">
+                                <rect key="frame" x="20" y="55" width="374" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <outlet property="musicImg" destination="8uq-rE-228" id="lgO-V1-l5j"/>
+                        <outlet property="songNameLabel" destination="Qmw-r0-YBl" id="Wdv-Y6-CDx"/>
+                        <outlet property="startOrStopButton" destination="HmD-TO-sPK" id="bIr-aF-kl2"/>
+                        <segue destination="MFz-kk-3J6" kind="showDetail" identifier="music2Main" id="wa2-DI-oWO"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mV8-br-SzH" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1014.4927536231885" y="566.57608695652175"/>
         </scene>
         <!--Weather View Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -261,5 +332,12 @@
         <image name="background" width="1250" height="781"/>
         <image name="boy" width="780" height="780"/>
         <image name="love" width="128" height="128"/>
+        <image name="music-player" width="128" height="128"/>
+        <image name="next" width="128" height="128"/>
+        <image name="play" width="128" height="128"/>
+        <image name="previous" width="128" height="128"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="wa2-DI-oWO"/>
+    </inferredMetricsTieBreakers>
 </document>
