@@ -14,6 +14,8 @@ class MainViewController: UIViewController {
     
     @IBOutlet weak var musicPlayerImgView: UIImageView!
     
+    @IBOutlet weak var alarmImgView: UIImageView!
+    
     override func viewDidLoad() {
         super.viewDidLoad();
         
@@ -32,6 +34,19 @@ class MainViewController: UIViewController {
         self.musicPlayerImgView.addGestureRecognizer(tapGestureForMusic)
         self.musicPlayerImgView.isUserInteractionEnabled = true
         
+        
+        
+        let tapGestureForAlarm=UITapGestureRecognizer(target: self, action: #selector(MainViewController.alarmTapped(_:)))
+        tapGestureForAlarm.numberOfTapsRequired = 1
+        tapGestureForAlarm.numberOfTouchesRequired = 1
+        self.alarmImgView.addGestureRecognizer(tapGestureForAlarm)
+        self.alarmImgView.isUserInteractionEnabled = true
+        
+    }
+    
+    
+    @objc func alarmTapped(_ sender: UITapGestureRecognizer) {
+        self.performSegue(withIdentifier: "main2Alarm", sender: sender)
     }
     
     
@@ -47,19 +62,4 @@ class MainViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
-    
-    
-    
-    
-    /*
-     // MARK: - Navigation
-     
-     // In a storyboard-based application, you will often want to do a little preparation before navigation
-     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-     // Get the new view controller using segue.destinationViewController.
-     // Pass the selected object to the new view controller.
-     }
-     */
-    
 }

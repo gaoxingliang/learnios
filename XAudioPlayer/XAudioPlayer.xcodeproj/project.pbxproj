@@ -12,6 +12,15 @@
 		1DF571A01FE4CD1100D9DF7A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1DF5719E1FE4CD1100D9DF7A /* Main.storyboard */; };
 		1DF571A21FE4CD1100D9DF7A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1DF571A11FE4CD1100D9DF7A /* Assets.xcassets */; };
 		1DF571A51FE4CD1100D9DF7A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1DF571A31FE4CD1100D9DF7A /* LaunchScreen.storyboard */; };
+		1DF571B51FE4CD3600D9DF7A /* Alan Walker;Iselin Solheim-Faded.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 1DF571AD1FE4CD3600D9DF7A /* Alan Walker;Iselin Solheim-Faded.mp3 */; };
+		1DF571B61FE4CD3600D9DF7A /* MC七星-佛说.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 1DF571AE1FE4CD3600D9DF7A /* MC七星-佛说.mp3 */; };
+		1DF571B71FE4CD3600D9DF7A /* Soler-风的季节.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 1DF571AF1FE4CD3600D9DF7A /* Soler-风的季节.mp3 */; };
+		1DF571B81FE4CD3600D9DF7A /* 伍佰 & China Blue-突然的自我.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 1DF571B01FE4CD3600D9DF7A /* 伍佰 & China Blue-突然的自我.mp3 */; };
+		1DF571B91FE4CD3600D9DF7A /* 夏天播放-小宝贝.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 1DF571B11FE4CD3600D9DF7A /* 夏天播放-小宝贝.mp3 */; };
+		1DF571BA1FE4CD3600D9DF7A /* 张宇-雨一直下.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 1DF571B21FE4CD3600D9DF7A /* 张宇-雨一直下.mp3 */; };
+		1DF571BB1FE4CD3600D9DF7A /* 钟镇涛-让一切随风.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 1DF571B31FE4CD3600D9DF7A /* 钟镇涛-让一切随风.mp3 */; };
+		1DF571BC1FE4CD3600D9DF7A /* 陈一发儿-童话镇.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 1DF571B41FE4CD3600D9DF7A /* 陈一发儿-童话镇.mp3 */; };
+		1DF571BE1FE4D04400D9DF7A /* Soler-风的季节.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 1DF571BD1FE4D04400D9DF7A /* Soler-风的季节.mp3 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +31,15 @@
 		1DF571A11FE4CD1100D9DF7A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1DF571A41FE4CD1100D9DF7A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1DF571A61FE4CD1100D9DF7A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1DF571AD1FE4CD3600D9DF7A /* Alan Walker;Iselin Solheim-Faded.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Alan Walker;Iselin Solheim-Faded.mp3"; sourceTree = "<group>"; };
+		1DF571AE1FE4CD3600D9DF7A /* MC七星-佛说.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "MC七星-佛说.mp3"; sourceTree = "<group>"; };
+		1DF571AF1FE4CD3600D9DF7A /* Soler-风的季节.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Soler-风的季节.mp3"; sourceTree = "<group>"; };
+		1DF571B01FE4CD3600D9DF7A /* 伍佰 & China Blue-突然的自我.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "伍佰 & China Blue-突然的自我.mp3"; sourceTree = "<group>"; };
+		1DF571B11FE4CD3600D9DF7A /* 夏天播放-小宝贝.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "夏天播放-小宝贝.mp3"; sourceTree = "<group>"; };
+		1DF571B21FE4CD3600D9DF7A /* 张宇-雨一直下.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "张宇-雨一直下.mp3"; sourceTree = "<group>"; };
+		1DF571B31FE4CD3600D9DF7A /* 钟镇涛-让一切随风.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "钟镇涛-让一切随风.mp3"; sourceTree = "<group>"; };
+		1DF571B41FE4CD3600D9DF7A /* 陈一发儿-童话镇.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "陈一发儿-童话镇.mp3"; sourceTree = "<group>"; };
+		1DF571BD1FE4D04400D9DF7A /* Soler-风的季节.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Soler-风的季节.mp3"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -38,6 +56,8 @@
 		1DF5718E1FE4CD1100D9DF7A = {
 			isa = PBXGroup;
 			children = (
+				1DF571BD1FE4D04400D9DF7A /* Soler-风的季节.mp3 */,
+				1DF571AC1FE4CD3600D9DF7A /* muiscs */,
 				1DF571991FE4CD1100D9DF7A /* XAudioPlayer */,
 				1DF571981FE4CD1100D9DF7A /* Products */,
 			);
@@ -62,6 +82,21 @@
 				1DF571A61FE4CD1100D9DF7A /* Info.plist */,
 			);
 			path = XAudioPlayer;
+			sourceTree = "<group>";
+		};
+		1DF571AC1FE4CD3600D9DF7A /* muiscs */ = {
+			isa = PBXGroup;
+			children = (
+				1DF571AD1FE4CD3600D9DF7A /* Alan Walker;Iselin Solheim-Faded.mp3 */,
+				1DF571AE1FE4CD3600D9DF7A /* MC七星-佛说.mp3 */,
+				1DF571AF1FE4CD3600D9DF7A /* Soler-风的季节.mp3 */,
+				1DF571B01FE4CD3600D9DF7A /* 伍佰 & China Blue-突然的自我.mp3 */,
+				1DF571B11FE4CD3600D9DF7A /* 夏天播放-小宝贝.mp3 */,
+				1DF571B21FE4CD3600D9DF7A /* 张宇-雨一直下.mp3 */,
+				1DF571B31FE4CD3600D9DF7A /* 钟镇涛-让一切随风.mp3 */,
+				1DF571B41FE4CD3600D9DF7A /* 陈一发儿-童话镇.mp3 */,
+			);
+			path = muiscs;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -123,8 +158,17 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1DF571BB1FE4CD3600D9DF7A /* 钟镇涛-让一切随风.mp3 in Resources */,
+				1DF571BC1FE4CD3600D9DF7A /* 陈一发儿-童话镇.mp3 in Resources */,
+				1DF571B61FE4CD3600D9DF7A /* MC七星-佛说.mp3 in Resources */,
 				1DF571A51FE4CD1100D9DF7A /* LaunchScreen.storyboard in Resources */,
+				1DF571B51FE4CD3600D9DF7A /* Alan Walker;Iselin Solheim-Faded.mp3 in Resources */,
+				1DF571B91FE4CD3600D9DF7A /* 夏天播放-小宝贝.mp3 in Resources */,
+				1DF571B71FE4CD3600D9DF7A /* Soler-风的季节.mp3 in Resources */,
+				1DF571B81FE4CD3600D9DF7A /* 伍佰 & China Blue-突然的自我.mp3 in Resources */,
 				1DF571A21FE4CD1100D9DF7A /* Assets.xcassets in Resources */,
+				1DF571BE1FE4D04400D9DF7A /* Soler-风的季节.mp3 in Resources */,
+				1DF571BA1FE4CD3600D9DF7A /* 张宇-雨一直下.mp3 in Resources */,
 				1DF571A01FE4CD1100D9DF7A /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -7,10 +7,29 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1D013C8B1FE57A9A0000EEAC /* AlarmViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D013C8A1FE57A9A0000EEAC /* AlarmViewController.swift */; };
+		1D0A1EAA1FFD201A00E385C2 /* AddAlarmOrEditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D0A1EA91FFD201A00E385C2 /* AddAlarmOrEditViewController.swift */; };
+		1D0A1EAC1FFD277400E385C2 /* Alarm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D0A1EAB1FFD277400E385C2 /* Alarm.swift */; };
+		1D0A1EAE1FFD2AEB00E385C2 /* WeekDaysViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D0A1EAD1FFD2AEB00E385C2 /* WeekDaysViewController.swift */; };
+		1D0A1EB01FFD305F00E385C2 /* Id.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D0A1EAF1FFD305F00E385C2 /* Id.swift */; };
 		1D37A5FF1FDF947500239E8F /* GaoDeWeatherService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D37A5FE1FDF947500239E8F /* GaoDeWeatherService.swift */; };
 		1D37A6011FDF95CA00239E8F /* HelloMe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D37A6001FDF95CA00239E8F /* HelloMe.swift */; };
+		1D5D19551FFF7CA400C6F2BF /* Protocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D5D19541FFF7CA400C6F2BF /* Protocols.swift */; };
+		1D5D19571FFF7D7300C6F2BF /* Alarms.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D5D19561FFF7D7300C6F2BF /* Alarms.swift */; };
+		1D5D19591FFF7D8F00C6F2BF /* SegueInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D5D19581FFF7D8F00C6F2BF /* SegueInfo.swift */; };
+		1D5D195D1FFF7F4000C6F2BF /* MediaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D5D195C1FFF7F4000C6F2BF /* MediaViewController.swift */; };
+		1D5D195F1FFF7F5900C6F2BF /* LabelEditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D5D195E1FFF7F5900C6F2BF /* LabelEditViewController.swift */; };
+		1D5D19611FFF813700C6F2BF /* CustUIWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D5D19601FFF813700C6F2BF /* CustUIWindow.swift */; };
+		1D5D19631FFF822100C6F2BF /* AppDelegateImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D5D19621FFF822100C6F2BF /* AppDelegateImpl.swift */; };
 		1D96A9851FDEC92A00286A4C /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D96A9841FDEC92A00286A4C /* MainViewController.swift */; };
 		1DD65A481FE43AC100F38B65 /* Base64.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DD65A471FE43AC100F38B65 /* Base64.swift */; };
+		1DF2A3A51FE514580025288A /* MusicViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DF2A3A41FE514580025288A /* MusicViewController.swift */; };
+		1DF2A3B11FE514F70025288A /* Soler-风的季节.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 1DF2A3A91FE514F70025288A /* Soler-风的季节.mp3 */; };
+		1DF2A3B21FE514F70025288A /* 伍佰 & China Blue-突然的自我.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 1DF2A3AA1FE514F70025288A /* 伍佰 & China Blue-突然的自我.mp3 */; };
+		1DF2A3B31FE514F70025288A /* 夏天播放-小宝贝.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 1DF2A3AB1FE514F70025288A /* 夏天播放-小宝贝.mp3 */; };
+		1DF2A3B51FE514F70025288A /* 钟镇涛-让一切随风.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 1DF2A3AD1FE514F70025288A /* 钟镇涛-让一切随风.mp3 */; };
+		1DF2A3B61FE514F70025288A /* 陈一发儿-童话镇.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 1DF2A3AE1FE514F70025288A /* 陈一发儿-童话镇.mp3 */; };
+		1DF2A3B81FE515300025288A /* Song.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DF2A3B71FE515300025288A /* Song.swift */; };
 		1E8FF8444E2C29BD30B867EF /* Pods_Tests_SwiftWeatherUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 418594A8DD8093A647A30E12 /* Pods_Tests_SwiftWeatherUITests.framework */; };
 		5120F2EFC3DE077315306794 /* Pods_SwiftWeather.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF971A1BA4A6D64984CB0A75 /* Pods_SwiftWeather.framework */; };
 		655E8966C3E09626A8221261 /* Pods_Tests_SwiftWeatherTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 342A91306F3CF92DD999C97D /* Pods_Tests_SwiftWeatherTests.framework */; };
@@ -23,7 +42,6 @@
 		AEBE643E1B8D2108004A0814 /* Forecast.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEBE643D1B8D2108004A0814 /* Forecast.swift */; };
 		AEBE64431B8D2370004A0814 /* Weather.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEBE64421B8D2370004A0814 /* Weather.swift */; };
 		AEBE64451B8D23B8004A0814 /* WeatherViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEBE64441B8D23B8004A0814 /* WeatherViewModel.swift */; };
-		AECBA5E61B836BF20004A536 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AECBA5E51B836BF20004A536 /* AppDelegate.swift */; };
 		AECBA5E81B836BF20004A536 /* WeatherViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AECBA5E71B836BF20004A536 /* WeatherViewController.swift */; };
 		AECBA5EB1B836BF20004A536 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AECBA5E91B836BF20004A536 /* Main.storyboard */; };
 		AECBA5ED1B836BF20004A536 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AECBA5EC1B836BF20004A536 /* Assets.xcassets */; };
@@ -63,10 +81,29 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1D013C8A1FE57A9A0000EEAC /* AlarmViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlarmViewController.swift; sourceTree = "<group>"; };
+		1D0A1EA91FFD201A00E385C2 /* AddAlarmOrEditViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddAlarmOrEditViewController.swift; sourceTree = "<group>"; };
+		1D0A1EAB1FFD277400E385C2 /* Alarm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alarm.swift; sourceTree = "<group>"; };
+		1D0A1EAD1FFD2AEB00E385C2 /* WeekDaysViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeekDaysViewController.swift; sourceTree = "<group>"; };
+		1D0A1EAF1FFD305F00E385C2 /* Id.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Id.swift; sourceTree = "<group>"; };
 		1D37A5FE1FDF947500239E8F /* GaoDeWeatherService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GaoDeWeatherService.swift; sourceTree = "<group>"; };
 		1D37A6001FDF95CA00239E8F /* HelloMe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelloMe.swift; sourceTree = "<group>"; };
+		1D5D19541FFF7CA400C6F2BF /* Protocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Protocols.swift; sourceTree = "<group>"; };
+		1D5D19561FFF7D7300C6F2BF /* Alarms.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alarms.swift; sourceTree = "<group>"; };
+		1D5D19581FFF7D8F00C6F2BF /* SegueInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegueInfo.swift; sourceTree = "<group>"; };
+		1D5D195C1FFF7F4000C6F2BF /* MediaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaViewController.swift; sourceTree = "<group>"; };
+		1D5D195E1FFF7F5900C6F2BF /* LabelEditViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelEditViewController.swift; sourceTree = "<group>"; };
+		1D5D19601FFF813700C6F2BF /* CustUIWindow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustUIWindow.swift; sourceTree = "<group>"; };
+		1D5D19621FFF822100C6F2BF /* AppDelegateImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegateImpl.swift; sourceTree = "<group>"; };
 		1D96A9841FDEC92A00286A4C /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		1DD65A471FE43AC100F38B65 /* Base64.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Base64.swift; sourceTree = "<group>"; };
+		1DF2A3A41FE514580025288A /* MusicViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicViewController.swift; sourceTree = "<group>"; };
+		1DF2A3A91FE514F70025288A /* Soler-风的季节.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Soler-风的季节.mp3"; sourceTree = "<group>"; };
+		1DF2A3AA1FE514F70025288A /* 伍佰 & China Blue-突然的自我.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "伍佰 & China Blue-突然的自我.mp3"; sourceTree = "<group>"; };
+		1DF2A3AB1FE514F70025288A /* 夏天播放-小宝贝.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "夏天播放-小宝贝.mp3"; sourceTree = "<group>"; };
+		1DF2A3AD1FE514F70025288A /* 钟镇涛-让一切随风.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "钟镇涛-让一切随风.mp3"; sourceTree = "<group>"; };
+		1DF2A3AE1FE514F70025288A /* 陈一发儿-童话镇.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "陈一发儿-童话镇.mp3"; sourceTree = "<group>"; };
+		1DF2A3B71FE515300025288A /* Song.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Song.swift; sourceTree = "<group>"; };
 		342A91306F3CF92DD999C97D /* Pods_Tests_SwiftWeatherTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Tests_SwiftWeatherTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		418594A8DD8093A647A30E12 /* Pods_Tests_SwiftWeatherUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Tests_SwiftWeatherUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		53EEE101C82E858E57980710 /* Pods-Tests-SwiftWeatherUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tests-SwiftWeatherUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Tests-SwiftWeatherUITests/Pods-Tests-SwiftWeatherUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -82,7 +119,6 @@
 		AEBE64421B8D2370004A0814 /* Weather.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Weather.swift; sourceTree = "<group>"; };
 		AEBE64441B8D23B8004A0814 /* WeatherViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; indentWidth = 2; lastKnownFileType = sourcecode.swift; path = WeatherViewModel.swift; sourceTree = "<group>"; tabWidth = 2; };
 		AECBA5E21B836BF20004A536 /* SwiftWeather.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftWeather.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		AECBA5E51B836BF20004A536 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AECBA5E71B836BF20004A536 /* WeatherViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherViewController.swift; sourceTree = "<group>"; };
 		AECBA5EA1B836BF20004A536 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		AECBA5EC1B836BF20004A536 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -151,12 +187,52 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		1D013C891FE57A7F0000EEAC /* alarm */ = {
+			isa = PBXGroup;
+			children = (
+				1D013C8A1FE57A9A0000EEAC /* AlarmViewController.swift */,
+				1D0A1EA91FFD201A00E385C2 /* AddAlarmOrEditViewController.swift */,
+				1D0A1EAB1FFD277400E385C2 /* Alarm.swift */,
+				1D0A1EAD1FFD2AEB00E385C2 /* WeekDaysViewController.swift */,
+				1D0A1EAF1FFD305F00E385C2 /* Id.swift */,
+				1D5D19541FFF7CA400C6F2BF /* Protocols.swift */,
+				1D5D19561FFF7D7300C6F2BF /* Alarms.swift */,
+				1D5D19581FFF7D8F00C6F2BF /* SegueInfo.swift */,
+				1D5D195C1FFF7F4000C6F2BF /* MediaViewController.swift */,
+				1D5D195E1FFF7F5900C6F2BF /* LabelEditViewController.swift */,
+				1D5D19601FFF813700C6F2BF /* CustUIWindow.swift */,
+				1D5D19621FFF822100C6F2BF /* AppDelegateImpl.swift */,
+			);
+			path = alarm;
+			sourceTree = "<group>";
+		};
+		1D5E28101FE511CC0041EF6C /* musi */ = {
+			isa = PBXGroup;
+			children = (
+				1DF2A3A41FE514580025288A /* MusicViewController.swift */,
+				1DF2A3B71FE515300025288A /* Song.swift */,
+			);
+			path = musi;
+			sourceTree = "<group>";
+		};
 		1D96A9831FDEC90600286A4C /* Main */ = {
 			isa = PBXGroup;
 			children = (
 				1D96A9841FDEC92A00286A4C /* MainViewController.swift */,
 			);
 			name = Main;
+			sourceTree = "<group>";
+		};
+		1DF2A3A61FE514F70025288A /* muiscs */ = {
+			isa = PBXGroup;
+			children = (
+				1DF2A3A91FE514F70025288A /* Soler-风的季节.mp3 */,
+				1DF2A3AA1FE514F70025288A /* 伍佰 & China Blue-突然的自我.mp3 */,
+				1DF2A3AB1FE514F70025288A /* 夏天播放-小宝贝.mp3 */,
+				1DF2A3AD1FE514F70025288A /* 钟镇涛-让一切随风.mp3 */,
+				1DF2A3AE1FE514F70025288A /* 陈一发儿-童话镇.mp3 */,
+			);
+			path = muiscs;
 			sourceTree = "<group>";
 		};
 		AE0DC2CB1B8E7ACE00E67147 /* Common */ = {
@@ -213,6 +289,8 @@
 		AEBE64411B8D231E004A0814 /* Features */ = {
 			isa = PBXGroup;
 			children = (
+				1D013C891FE57A7F0000EEAC /* alarm */,
+				1D5E28101FE511CC0041EF6C /* musi */,
 				1D96A9831FDEC90600286A4C /* Main */,
 				AEBE64401B8D2306004A0814 /* Weather */,
 				AEBE643C1B8D203C004A0814 /* Forecast */,
@@ -223,6 +301,7 @@
 		AECBA5D91B836BF20004A536 = {
 			isa = PBXGroup;
 			children = (
+				1DF2A3A61FE514F70025288A /* muiscs */,
 				AECBA5E41B836BF20004A536 /* SwiftWeather */,
 				AECBA5F91B836BF20004A536 /* SwiftWeatherTests */,
 				AECBA6041B836BF20004A536 /* SwiftWeatherUITests */,
@@ -250,7 +329,6 @@
 				AEBE643F1B8D22ED004A0814 /* Storyboards */,
 				AE6C34E71B84742900F726C2 /* fonts */,
 				AECBA5EC1B836BF20004A536 /* Assets.xcassets */,
-				AECBA5E51B836BF20004A536 /* AppDelegate.swift */,
 				AECBA5F11B836BF20004A536 /* Info.plist */,
 				1D37A6001FDF95CA00239E8F /* HelloMe.swift */,
 			);
@@ -403,6 +481,12 @@
 						CreatedOnToolsVersion = 7.0;
 						DevelopmentTeam = 7U4463ZZQY;
 						LastSwiftMigration = 0900;
+						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+						};
 					};
 					AECBA5F51B836BF20004A536 = {
 						CreatedOnToolsVersion = 7.0;
@@ -442,8 +526,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				AECBA5F01B836BF20004A536 /* LaunchScreen.storyboard in Resources */,
+				1DF2A3B21FE514F70025288A /* 伍佰 & China Blue-突然的自我.mp3 in Resources */,
+				1DF2A3B31FE514F70025288A /* 夏天播放-小宝贝.mp3 in Resources */,
+				1DF2A3B61FE514F70025288A /* 陈一发儿-童话镇.mp3 in Resources */,
 				AECBA5ED1B836BF20004A536 /* Assets.xcassets in Resources */,
 				AE6C34E91B84742900F726C2 /* weathericons-regular-webfont.ttf in Resources */,
+				1DF2A3B51FE514F70025288A /* 钟镇涛-让一切随风.mp3 in Resources */,
+				1DF2A3B11FE514F70025288A /* Soler-风的季节.mp3 in Resources */,
 				AECBA5EB1B836BF20004A536 /* Main.storyboard in Resources */,
 				AE26CCAB1B875C2400D518CB /* ForecastView.xib in Resources */,
 			);
@@ -647,23 +736,36 @@
 				AE2C7D6C1BA028C000A7A714 /* WeatherIcon.swift in Sources */,
 				AECBA5E81B836BF20004A536 /* WeatherViewController.swift in Sources */,
 				AEBE643B1B8D1F90004A0814 /* ForecastViewModel.swift in Sources */,
-				AECBA5E61B836BF20004A536 /* AppDelegate.swift in Sources */,
 				AEF61B281BA23B1200E8F259 /* ForecastDateTime.swift in Sources */,
 				AEEDF6891B9F09E300C6067B /* Error.swift in Sources */,
 				AEEDF68B1B9F99F800C6067B /* WeatherBuilder.swift in Sources */,
+				1D013C8B1FE57A9A0000EEAC /* AlarmViewController.swift in Sources */,
+				1D5D19631FFF822100C6F2BF /* AppDelegateImpl.swift in Sources */,
 				AEBE64451B8D23B8004A0814 /* WeatherViewModel.swift in Sources */,
 				AED4B2C21B876E8B0003D765 /* ForecastView.swift in Sources */,
+				1DF2A3B81FE515300025288A /* Song.swift in Sources */,
+				1D0A1EB01FFD305F00E385C2 /* Id.swift in Sources */,
 				EADFFD301CAEA22F008357FF /* TemperatureConverter.swift in Sources */,
 				AE09C4301B9723DE00C7CCED /* LocationService.swift in Sources */,
+				1D5D19551FFF7CA400C6F2BF /* Protocols.swift in Sources */,
 				AEBE64431B8D2370004A0814 /* Weather.swift in Sources */,
 				AEBE643E1B8D2108004A0814 /* Forecast.swift in Sources */,
 				1D37A6011FDF95CA00239E8F /* HelloMe.swift in Sources */,
 				CAB56F4267B3BC487990A92D /* OpenWeatherMapService.swift in Sources */,
+				1D5D195F1FFF7F5900C6F2BF /* LabelEditViewController.swift in Sources */,
+				1D5D19591FFF7D8F00C6F2BF /* SegueInfo.swift in Sources */,
+				1DF2A3A51FE514580025288A /* MusicViewController.swift in Sources */,
 				1DD65A481FE43AC100F38B65 /* Base64.swift in Sources */,
 				1D96A9851FDEC92A00286A4C /* MainViewController.swift in Sources */,
+				1D5D19571FFF7D7300C6F2BF /* Alarms.swift in Sources */,
+				1D0A1EAC1FFD277400E385C2 /* Alarm.swift in Sources */,
 				AEEDF68D1B9F9B2900C6067B /* Temperature.swift in Sources */,
 				1D37A5FF1FDF947500239E8F /* GaoDeWeatherService.swift in Sources */,
+				1D0A1EAA1FFD201A00E385C2 /* AddAlarmOrEditViewController.swift in Sources */,
+				1D5D19611FFF813700C6F2BF /* CustUIWindow.swift in Sources */,
 				CAB565DDADB61DF9053BD50F /* WeatherServiceProtocol.swift in Sources */,
+				1D5D195D1FFF7F4000C6F2BF /* MediaViewController.swift in Sources */,
+				1D0A1EAE1FFD2AEB00E385C2 /* WeekDaysViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -830,11 +932,16 @@
 			baseConfigurationReference = 900AFFBB41C69FC277CB0A33 /* Pods-SwiftWeather.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7U4463ZZQY;
 				INFOPLIST_FILE = SwiftWeather/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = edward.00.love;
+				PRODUCT_BUNDLE_IDENTIFIER = edward.love.00;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
 				SWIFT_VERSION = 4.0;
 			};
@@ -845,11 +952,16 @@
 			baseConfigurationReference = E835C39D4B929F35B6A57B12 /* Pods-SwiftWeather.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7U4463ZZQY;
 				INFOPLIST_FILE = SwiftWeather/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = edward.00.love;
+				PRODUCT_BUNDLE_IDENTIFIER = edward.love.00;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
 				SWIFT_VERSION = 4.0;
 			};

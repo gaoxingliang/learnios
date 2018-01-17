@@ -1,20 +1,24 @@
 //
-//  AlarmViewController.swift
-//  SwiftWeather
+//  MainAlarmViewController.swift
+//  Alarm-ios-swift
 //
-//  Created by edward.gao on 17/12/2017.
-//  Copyright © 2017 Jake Lin. All rights reserved.
+//  Created by longyutao on 15-2-28.
+//  Copyright (c) 2015年 LongGames. All rights reserved.
 //
 
 import UIKit
 
-class AlarmViewController: UITableViewController {
-    
-    
-    var alarmDelegate: AlarmApplicationDelegate = AppDelegateImpl()
+class MainAlarmViewController: UITableViewController{
+   
+    var alarmDelegate: AlarmApplicationDelegate = AppDelegate()
     var alarmScheduler: AlarmSchedulerDelegate = Scheduler()
     var alarmModel: Alarms = Alarms()
     
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        alarmScheduler.checkNotification()
+        tableView.allowsSelectionDuringEditing = true
+    }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -38,12 +42,12 @@ class AlarmViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 90
     }
-    
+
     override func numberOfSections(in tableView: UITableView) -> Int {
         // Return the number of sections.
         return 1
     }
-    
+
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // Return the number of rows in the section.
         if alarmModel.count == 0 {
@@ -71,9 +75,9 @@ class AlarmViewController: UITableViewController {
         cell!.selectionStyle = .none
         cell!.tag = indexPath.row
         let alarm: Alarm = alarmModel.alarms[indexPath.row]
-        let amAttr: [NSAttributedStringKey : Any] = [NSAttributedStringKey.font : UIFont.systemFont(ofSize: 20.0)]
+        let amAttr: [String : Any] = [NSFontAttributeName : UIFont.systemFont(ofSize: 20.0)]
         let str = NSMutableAttributedString(string: alarm.formattedTime, attributes: amAttr)
-        let timeAttr: [NSAttributedStringKey : Any] = [NSAttributedStringKey.font : UIFont.systemFont(ofSize: 45.0)]
+        let timeAttr: [String : Any] = [NSFontAttributeName : UIFont.systemFont(ofSize: 45.0)]
         str.addAttributes(timeAttr, range: NSMakeRange(0, str.length-2))
         cell!.textLabel?.attributedText = str
         cell!.detailTextLabel?.text = alarm.label
@@ -83,7 +87,7 @@ class AlarmViewController: UITableViewController {
         
         //tag is used to indicate which row had been touched
         sw.tag = indexPath.row
-        sw.addTarget(self, action: #selector(AlarmViewController.switchTapped(_:)), for: UIControlEvents.valueChanged)
+        sw.addTarget(self, action: #selector(MainAlarmViewController.switchTapped(_:)), for: UIControlEvents.valueChanged)
         if alarm.enabled {
             cell!.backgroundColor = UIColor.white
             cell!.textLabel?.alpha = 1.0
@@ -115,7 +119,7 @@ class AlarmViewController: UITableViewController {
             tableView.reloadData()
         }
     }
-    
+
     // Override to support editing the table view.
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
@@ -136,22 +140,15 @@ class AlarmViewController: UITableViewController {
             // Delete the row from the data source
             tableView.deleteRows(at: [indexPath], with: .fade)
             alarmScheduler.reSchedule()
-        }
+        }   
     }
     
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        
-        // 右滑回到主菜单去
-        if segue.identifier == "alarm2Main" {
-            super.prepare(for: segue, sender: sender)
-            return;
-        }
-        
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
         let dist = segue.destination as! UINavigationController
-        let addEditController = dist.topViewController as! AddAlarmOrEditViewController
+        let addEditController = dist.topViewController as! AlarmAddEditViewController
         if segue.identifier == Id.addSegueIdentifier {
             addEditController.navigationItem.title = "Add Alarm"
             addEditController.segueInfo = SegueInfo(curCellIndex: alarmModel.count, isEditMode: false, label: "Alarm", mediaLabel: "bell", mediaID: "", repeatWeekdays: [], enabled: false, snoozeEnabled: false)
@@ -187,22 +184,5 @@ class AlarmViewController: UITableViewController {
         }
     }
 
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        alarmScheduler.checkNotification()
-        tableView.allowsSelectionDuringEditing = true
-        // Do any additional setup after loading the view.
-        
-        // back to main
-        let swiperight: UISwipeGestureRecognizer = UISwipeGestureRecognizer(target: self, action: #selector(AlarmViewController.swiperight(gestureRecognizer:)))
-        swiperight.direction = .right
-        self.view!.addGestureRecognizer(swiperight)
-        
-    }
-    
-    @objc func swiperight(gestureRecognizer: UISwipeGestureRecognizer) {
-        self.performSegue(withIdentifier: "alarm2Main", sender: gestureRecognizer)
-        
-    }
 }
+

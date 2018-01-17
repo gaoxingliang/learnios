@@ -21,8 +21,6 @@ class MusicViewController: UIViewController , AVAudioPlayerDelegate{
 
     @IBOutlet weak var startOrStopButton: UIButton!
     
-
-    
     @IBOutlet weak var musicImg: UIImageView!
     
     @IBOutlet weak var songNameLabel: UILabel!
@@ -110,7 +108,7 @@ class MusicViewController: UIViewController , AVAudioPlayerDelegate{
                 // no songs here
                 currentSongIndex = 0;
             }
-            var currentSong = allSongs[currentSongIndex]
+            let currentSong = allSongs[currentSongIndex]
             
             playSongWith(audioSourceURL: currentSong.songUrl)
             updateSongName(songName: currentSong.songName)
@@ -149,28 +147,24 @@ class MusicViewController: UIViewController , AVAudioPlayerDelegate{
     
     // 提取相册 如果可行的话 https://stackoverflow.com/questions/33409795/how-to-get-mp3-files-artwork-in-swiftimportant-because-the-objectc-method-does
     func extractArtImageIfPossible(song : Song) -> UIImage? {
-        var artworkData: NSData = NSData()
-        do {
-            let asset = AVURLAsset(url: song.songUrl)
-            for metadata in asset.metadata {
-                if let commonKey = metadata.commonKey {
-                    if let keySpace = metadata.keySpace {
-                        if keySpace == AVMetadataKeySpace.iTunes {
-                            print("keyspace == AVMetadataKeySpaceiTunes")
-                            //artworkData = (metadata.value?.copy(with:nil))! as! NSData
-                        } else {
-                            if let data = metadata.dataValue {
-                                let image = UIImage(data: data)
-                                return image
-                            }
+        //var artworkData: NSData = NSData()
+        let asset = AVURLAsset(url: song.songUrl)
+        for metadata in asset.metadata {
+            if metadata.commonKey != nil {
+                if let keySpace = metadata.keySpace {
+                    if keySpace == AVMetadataKeySpace.iTunes {
+                        print("keyspace == AVMetadataKeySpaceiTunes")
+                        //artworkData = (metadata.value?.copy(with:nil))! as! NSData
+                    } else {
+                        if let data = metadata.dataValue {
+                            let image = UIImage(data: data)
+                            return image
                         }
                     }
                 }
             }
-        } catch {
-            print("Fail to parse it")
-            print(error)
         }
+       
         return nil
     }
     
@@ -209,15 +203,15 @@ class MusicViewController: UIViewController , AVAudioPlayerDelegate{
         do {
             let songPath = try FileManager.default.contentsOfDirectory(at: folderURL, includingPropertiesForKeys: nil, options: .skipsHiddenFiles)
             for song in songPath {
-                var mySongPath = song.absoluteString
+                let mySongPath = song.absoluteString
                 if mySongPath.contains(".mp3") {
                     
                     let findString = mySongPath.split(separator: "/")
                     let mySong = String(findString[findString.count - 1])
-                    var nsString = mySong as NSString // 陈一发儿-童话镇.mp3
+                    let nsString = mySong as NSString // 陈一发儿-童话镇.mp3
                     print(nsString.removingPercentEncoding!)
                     //nsString = nsString.removingPercentEncoding!
-                    var musicSongNameWithEnds =  nsString.removingPercentEncoding!
+                    let musicSongNameWithEnds =  nsString.removingPercentEncoding!
                     let range = musicSongNameWithEnds.range(of:".mp3")
                     let index = range!.lowerBound
                     let subStr = String(musicSongNameWithEnds[..<index])
